@@ -43,5 +43,12 @@ describe("首字母大写模块", function() {
         expect(str.valueOf()).to.equal("who is JavaScript?");
     });
 
+    it("测试抛出错误", function() {
+        expect(function() { capitalize(123); }).to.throw(Error);
+    });
+
+    it("测试否定测试", function() {
+        expect(capitalize("foo")).not.to.equal("foo");
+    });
 
 })
